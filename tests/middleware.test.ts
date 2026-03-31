@@ -57,7 +57,7 @@ const mockPaymentResponse: PaymentInitiateResponse = {
   amount_usd_cents: 100,
   currency: 'USD',
   status: 'pending',
-  pay_url: 'https://pay.mainlayer.xyz/pay_abc_123',
+  pay_url: 'https://pay.mainlayer.fr/pay_abc_123',
 }
 
 // ─── Helper: build a minimal Hono test app ────────────────────────────────────

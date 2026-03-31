@@ -21,7 +21,7 @@ import { MainlayerClient } from './client.js'
 import type { MainlayerRouteOptions, PaymentInitiateRequest } from './types.js'
 import { MainlayerError } from './types.js'
 
-const DEFAULT_BASE_URL = 'https://api.mainlayer.xyz'
+const DEFAULT_BASE_URL = 'https://api.mainlayer.fr'
 
 function handleError(c: import('hono').Context, err: unknown) {
   if (err instanceof MainlayerError) {

@@ -15,7 +15,7 @@ import type {
 } from './types.js'
 import { MainlayerAuthError, MainlayerError, MainlayerNetworkError } from './types.js'
 
-const DEFAULT_BASE_URL = 'https://api.mainlayer.xyz'
+const DEFAULT_BASE_URL = 'https://api.mainlayer.fr'
 const DEFAULT_TIMEOUT_MS = 10_000
 
 export class MainlayerClient {

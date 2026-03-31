@@ -1,6 +1,6 @@
 # @mainlayer/hono
 
-Hono middleware for [Mainlayer](https://mainlayer.xyz) — payment infrastructure for AI agents. Gate any route behind a paywall in two lines. Fully edge-compatible: runs on **Cloudflare Workers**, Deno Deploy, Vercel Edge Functions, and any [WinterCG](https://wintercg.org/) runtime.
+Hono middleware for [Mainlayer](https://mainlayer.fr) — payment infrastructure for AI agents. Gate any route behind a paywall in two lines. Fully edge-compatible: runs on **Cloudflare Workers**, Deno Deploy, Vercel Edge Functions, and any [WinterCG](https://wintercg.org/) runtime.
 
 [![npm version](https://img.shields.io/npm/v/@mainlayer/hono)](https://www.npmjs.com/package/@mainlayer/hono)
 [![CI](https://github.com/mainlayer/mainlayer-js/actions/workflows/ci.yml/badge.svg)](https://github.com/mainlayer/mainlayer-js/actions)
@@ -117,7 +117,7 @@ Content-Type: application/json
   "price_usd_cents": 100,
   "price_display": "$1.00",
   "currency": "USD",
-  "pay_endpoint": "https://api.mainlayer.xyz/v1/payments"
+  "pay_endpoint": "https://api.mainlayer.fr/v1/payments"
 }
 ```
 
@@ -156,9 +156,9 @@ app.route('/mainlayer', createMainlayerRoutes(apiKey))
 {
   "api_version": "v1",
   "integration": "@mainlayer/hono",
-  "base_url": "https://api.mainlayer.xyz",
-  "pay_endpoint": "https://api.mainlayer.xyz/v1/payments",
-  "access_endpoint": "https://api.mainlayer.xyz/v1/access/:resourceId",
+  "base_url": "https://api.mainlayer.fr",
+  "pay_endpoint": "https://api.mainlayer.fr/v1/payments",
+  "access_endpoint": "https://api.mainlayer.fr/v1/access/:resourceId",
   "supported_currencies": ["USD"],
   "available_resources": [
     {
@@ -183,7 +183,7 @@ import { MainlayerClient } from '@mainlayer/hono'
 
 const client = new MainlayerClient({
   apiKey: 'ml_live_...',
-  baseUrl: 'https://api.mainlayer.xyz', // optional, this is the default
+  baseUrl: 'https://api.mainlayer.fr', // optional, this is the default
   timeoutMs: 10_000,                    // optional, default 10s
 })
 
@@ -346,5 +346,5 @@ MIT — see [LICENSE](LICENSE).
 
 ## Support
 
-- Documentation: [https://docs.mainlayer.xyz](https://docs.mainlayer.xyz)
+- Documentation: [https://docs.mainlayer.fr](https://docs.mainlayer.fr)
 - Issues: [https://github.com/mainlayer/mainlayer-js/issues](https://github.com/mainlayer/mainlayer-js/issues)

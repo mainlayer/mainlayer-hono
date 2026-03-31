@@ -10,7 +10,7 @@ import { MainlayerClient } from './client.js'
 import type { MainlayerPaywallOptions, PaymentRequiredInfo } from './types.js'
 import { MainlayerError } from './types.js'
 
-const DEFAULT_BASE_URL = 'https://api.mainlayer.xyz'
+const DEFAULT_BASE_URL = 'https://api.mainlayer.fr'
 
 /**
  * Default strategy for extracting a payer identifier from the request.

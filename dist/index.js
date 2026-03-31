@@ -22,7 +22,7 @@ var MainlayerNetworkError = class extends MainlayerError {
 };
 
 // src/client.ts
-var DEFAULT_BASE_URL = "https://api.mainlayer.xyz";
+var DEFAULT_BASE_URL = "https://api.mainlayer.fr";
 var DEFAULT_TIMEOUT_MS = 1e4;
 var MainlayerClient = class {
   apiKey;
@@ -148,7 +148,7 @@ function createClient(options) {
 }
 
 // src/middleware.ts
-var DEFAULT_BASE_URL2 = "https://api.mainlayer.xyz";
+var DEFAULT_BASE_URL2 = "https://api.mainlayer.fr";
 function defaultGetPayerWallet(c) {
   const header = c.req.header("x-payer-wallet");
   if (header) return header;
@@ -231,7 +231,7 @@ function getMainlayerAccess(c) {
 
 // src/routes.ts
 import { Hono } from "hono";
-var DEFAULT_BASE_URL3 = "https://api.mainlayer.xyz";
+var DEFAULT_BASE_URL3 = "https://api.mainlayer.fr";
 function handleError(c, err) {
   if (err instanceof MainlayerError) {
     return c.json(

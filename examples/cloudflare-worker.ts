@@ -75,7 +75,7 @@ function custom402(c: import('hono').Context, info: PaymentRequiredInfo) {
       instructions:
         `To gain access, POST to ${info.pay_endpoint} with ` +
         `{ "resource_id": "${info.resource_id}", "payer_wallet": "<your-wallet>" }`,
-      docs: 'https://docs.mainlayer.xyz/agents',
+      docs: 'https://docs.mainlayer.fr/agents',
     },
     402,
   )
