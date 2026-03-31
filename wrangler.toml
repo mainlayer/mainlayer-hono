@@ -1,0 +1,49 @@
+# Cloudflare Workers configuration for the @mainlayer/hono example worker.
+# Docs: https://developers.cloudflare.com/workers/wrangler/configuration/
+
+name = "mainlayer-hono-example"
+main = "examples/cloudflare-worker.ts"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# ─── Build ────────────────────────────────────────────────────────────────────
+
+[build]
+command = "npm run build"
+
+# ─── Environment variables (non-secret) ──────────────────────────────────────
+
+[vars]
+# Add any non-secret runtime vars here.
+# APP_NAME = "Mainlayer Hono Example"
+
+# ─── Secrets (set via Wrangler CLI, never committed) ─────────────────────────
+# Set with:  npx wrangler secret put MAINLAYER_API_KEY
+
+# ─── KV Namespaces (optional — used for access-check caching) ─────────────────
+
+# [[kv_namespaces]]
+# binding = "ACCESS_CACHE"
+# id = "<your-kv-namespace-id>"
+# preview_id = "<your-preview-kv-namespace-id>"
+
+# ─── Environments ─────────────────────────────────────────────────────────────
+
+[env.staging]
+name = "mainlayer-hono-staging"
+vars = {}
+
+[env.production]
+name = "mainlayer-hono-production"
+vars = {}
+
+# ─── Routes (optional — map custom domain) ───────────────────────────────────
+
+# [[routes]]
+# pattern = "api.yourdomain.com/*"
+# zone_name = "yourdomain.com"
+
+# ─── Observability ────────────────────────────────────────────────────────────
+
+[observability]
+enabled = true

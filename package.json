@@ -1,0 +1,66 @@
+{
+  "name": "@mainlayer/hono",
+  "version": "0.1.0",
+  "description": "Hono middleware for Mainlayer payments — edge/Cloudflare Workers compatible",
+  "keywords": [
+    "mainlayer",
+    "hono",
+    "payments",
+    "middleware",
+    "cloudflare-workers",
+    "edge",
+    "ai-agents",
+    "402"
+  ],
+  "author": "Mainlayer <dev@mainlayer.xyz>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mainlayer/mainlayer-js.git",
+    "directory": "packages/mainlayer-hono"
+  },
+  "homepage": "https://docs.mainlayer.xyz/integrations/hono",
+  "bugs": {
+    "url": "https://github.com/mainlayer/mainlayer-js/issues"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "peerDependencies": {
+    "hono": ">=3.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250322.0",
+    "@vitest/coverage-v8": "^2.0.0",
+    "hono": "^4.7.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
